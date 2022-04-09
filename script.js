@@ -94,8 +94,6 @@ function deleteCard(val) {
   if (arr_of_obj.size == 0) {
     document.getElementById("empty-list").style.display = "block";
   }
-
-  //console.log(arr_of_obj);
 }
 
 function createCard() {
@@ -107,7 +105,6 @@ function completedTask(value) {
   document.getElementById(`${value}`).style.textDecoration = "line-through";
   document.getElementById(`${value}`).style.color = "#112D4E";
   document.getElementById(`check-done-${value}`).remove();
-  //console.log(value);
 }
 
 function display(card) {
@@ -148,12 +145,9 @@ function headerFunc(val) {
       }
     }
   }
-  //console.log(card_header);
-
   document.querySelector("#name_of_head").style.display = "none";
   document.querySelector("#button_text").style.display = "none";
   for (let ele of arr_of_obj) {
-    //console.log(ele.id);
     if (ele.id == val) {
       document.getElementById(`${ele.id}`).style.display = "block";
     } else {
