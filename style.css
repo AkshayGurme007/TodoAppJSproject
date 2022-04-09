@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  color: black;
+}
+.main-container {
+  background-color: bisque;
+  height: 100%;
+  width: 95%;
+  margin-left: 30px;
+}
+#header {
+  display: flex;
+  font-size: 50px;
+  margin: 5% 0 0 10%;
+}
+#Addbutton {
+  z-index: 1;
+  position: absolute;
+  left: 80%;
+  color: gray;
+  cursor: pointer;
+}
+.coloris {
+  color: red;
+}
+#inputM-box {
+  border-radius: 10px;
+  font-size: medium;
+  box-sizing: border-box;
+}
+#modaldiv {
+  display: none;
+  position: fixed;
+  padding: 20% 0 0 30%;
+  top: -10%;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+#modalbox {
+  border-radius: 7px;
+  width: 30vw;
+  height: 25vh;
+  padding: 10px 0 0 0px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  animation: modalPop 0.2s ease-in 0s 1;
+}
+.main-text {
+  color: red;
+  font-size: 40px;
+}
+.red-button {
+  border-radius: 250px;
+  margin-top: 5%;
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  width: 25%;
+  height: 20%;
+  cursor: pointer;
+}
+button {
+  border: none;
+}
+#modal-close-button {
+  margin-left: 10%;
+}
+.modal-content {
+  margin-top: 3%;
+  font-size: 20px;
+}
+.input-box {
+  width: 80%;
+  height: 25%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+#outer_container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10%;
+  width: 90%;
+}
+.card {
+  list-style: none;
+  display: none;
+  position: relative;
+  height: 320px;
+  width: 15%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 5% 0 0 10%;
+  padding: 10px 0 0 0;
+  background: white;
+  box-shadow: 0px 0px 20px red;
+  animation: cardAnimate 0.2s ease-in 0s 1;
+}
+.card-head {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: gray;
+  cursor: pointer;
+}
+.list-element {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.buttons-in-card {
+  display: flex;
+  font-size: 30px;
+}
+.delete-button-in-card {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  color: red;
+  background-color: #eeeeee;
+}
+.add-button-in-card {
+  position: absolute;
+  bottom: 10px;
+  font-size: 25px;
+  margin-left: 15%;
+  right: 10px;
+  cursor: pointer;
+  color: green;
+  background-color: #eeeeee;
+}
+.innerlist-button {
+  cursor: pointer;
+}
+#modalDiv_card {
+  display: none;
+  position: fixed;
+  padding: 20% 0 0 30%;
+  text-align: center;
+  top: -10%;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+#modalBox_card {
+  border-radius: 7px;
+  width: 30vw;
+  height: 25vh;
+  padding: 10px 0 0 0px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  animation: modalPop 0.2s ease-in 0s 1;
+}
+.this-list-element {
+  font-size: 30px;
+  font-weight: 700;
+  color: #393e46;
+  animation: cardTextAnimate 0.2s ease-in 0s 1;
+}
+#check-done {
+  color: black;
+  background-color: grey;
+  display: none;
+}
+.mark-as-done-class {
+  background-color: red;
+  color: #eeeeee;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px 10px 10px 10px;
+}
+#back_button {
+  margin-left: 10%;
+  font-size: 40px;
+  color: red;
+  display: none;
+}
+#back-icon {
+  z-index: 20;
+  font-size: 40px;
+  color: #e41414;
+  cursor: pointer;
+}
+#dynamic-card {
+  justify-content: center;
+  font-size: 55px;
+  font-weight: 700;
+  color: gray;
+  display: none;
+}
+#empty-list {
+  position: relative;
+  top: 1vh;
+  margin-left: 10vw;
+  color: rgb(253, 9, 9);
+  font-size: 50px;
+  font-weight: 500;
+}
+
+@keyframes modalPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cardAnimate {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cardTextAnimate {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    margin: 5% 0 0 10%;
+  }
+  #Addbutton {
+    position: relative;
+    bottom: -30px;
+    left: 40px;
+  }
+  #inputM-box {
+    border-radius: 10px;
+    font-size: medium;
+    box-sizing: border-box;
+  }
+  #modalbox {
+    width: 75vw;
+    height: 35vh;
+    position: relative;
+    top: 180px;
+    left: -80px;
+    padding: 10px 0 0 0px;
+  }
+  .main-text {
+    color: red;
+    font-size: 40px;
+  }
+
+  .input-box {
+    width: 80%;
+    height: 25%;
+    text-align: center;
+    font-size: 30px;
+  }
+  #outer_container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40%;
+    width: 90%;
+  }
+  .card {
+    list-style: none;
+    display: none;
+    position: relative;
+    height: 320px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10% 0 0 30%;
+    padding: 20px 0 0 0;
+    background: white;
+    box-shadow: 0px 0px 20px red;
+    animation: cardAnimate 0.2s ease-in 0s 1;
+  }
+
+  #modalDiv_card {
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    text-align: center;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+  }
+  #modalBox_card {
+    width: 70vw;
+    height: 30vh;
+    position: relative;
+    bottom: -180px;
+    left: -40px;
+  }
+  #dynamic-card {
+    justify-content: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: red;
+    display: none;
+  }
+  #empty-list {
+    position: relative;
+    top: 5vh;
+    margin-left: 10vw;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: 500;
+  }
+}

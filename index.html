@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/393bd706fe.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main-container">
+    <div id="header">
+        <div id="name_of_head">
+            <span style="font-weight: 800; color: red;font-size: 70px;">Tasks</span> <span style="color: grey;font-size: 50px;">List</span>
+        </div>
+        <div id="Addbutton"  onclick="modal()" >
+            <i style="font-size:40px; " class="fas fa-plus-circle coloris "></i>
+            <span id="button_text">Add List</span>
+        </div>
+    </div>
+    <div id="back_button">
+        <i id="back_icon" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>
+        Back
+    </div>
+    <div id="dynamic-card">XYZ</div>
+    <div id="modaldiv">
+        <div id="modalbox">
+            <span class="main-text modal-content">Add New List</span>
+            <input id="inputM-box" class="input-box modal-content" type="text" placeholder="Add New List"> <br></input>
+            <button id= "modal-add-button" class="red-button modal-content" onclick="addCard()">ADD</button>
+            <button id="modal-close-button" class="red-button modal-content" onclick="closeModal()">CLOSE</button>
+        </div>
+        
+    </div>
+    <div id="modalDiv_card">
+        <div id="modalBox_card">
+            <span class="main-text modal-content">Add New Item</span>
+            <input id="inputM-box-card" class="input-box modal-content" type="text" placeholder="Add New Item"> <br></input>
+            <button id= "modal-add-button" class="red-button modal-content" onclick="addList()">ADD</button>
+            <button id="modal-close-button" class="red-button modal-content" onclick="closeCardModal()">CLOSE</button>
+        </div>
+    </div>
+    <div style="display: none;" class="this-list-element">
+        <button class="innerlist-button" value="" onclick="completedTask(this)">Compelted</button>
+     </div>
+     <div id="empty-list">
+        No items in todo list
+    </div>
+    <div id="outer_container">
+        <div class="card">
+            <div class="wrap-cont">
+            <option class="card-head" onclick="headerFunc(this.value)">Try</option>
+            <br><hr><div class="add-list-after-this"></div>
+            <br>
+            <div class="buttons-in-card">
+                <button class="fas fa-trash delete-button-in-card"></button>    
+                <button class="fas fa-plus-circle add-button-in-card"></button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
